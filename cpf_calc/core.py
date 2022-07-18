@@ -1,7 +1,4 @@
-
-def cpf_generate(
-    cpf: str
-):
+def cpf_generate(cpf: str):
     splitted_cpf = list(cpf)
 
     for number in splitted_cpf:
@@ -10,7 +7,6 @@ def cpf_generate(
     for number in splitted_cpf:
         print(type(number))
 
-     
-cpf = '42312465486'
-print(cpf_generate(cpf))
 
+cpf = "42312465486"
+print(cpf_generate(cpf))
