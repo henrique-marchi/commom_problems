@@ -1,13 +1,14 @@
-import json
-from fastapi import requests
+import requests
 
-from models import Cep
+
+# from models import Cep
 
 def search_cep(cep):
-    cep = Cep(**locals())
-    request = requests.get(f"viacep.com.br/ws/{cep}/json/")
-    json = json.loads(requests.content)
-    print(json)
+    api_url = f"http://viacep.com.br/ws/{cep}/json/"
+    response = requests.get(api_url)
+    print(response.json())
 
 
-search_cep('09360510')
+search_cep(45860000)
+
+#01310200

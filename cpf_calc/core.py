@@ -1,9 +1,16 @@
 
-def cpf(
-    cpf
+def cpf_generate(
+    cpf: str
 ):
-    cpf = cpf.split()
+    splitted_cpf = list(cpf)
 
-    print(cpf)
+    for number in splitted_cpf:
+        int(number)
 
-    return cpf
+    for number in splitted_cpf:
+        print(type(number))
+
+     
+cpf = '42312465486'
+print(cpf_generate(cpf))
+

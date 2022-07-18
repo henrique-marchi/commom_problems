@@ -1,12 +1,15 @@
 from pydantic import validator
 
-class Cep():
+def cep_validator(
     cep: int
+):
 
     @validator("cep")
     def validate_cep(cls, v):
-        if cep.lenght != 8:
+        print(f'before validation: {v}')
+        if v.lenght != 8:
             raise RuntimeError(f"CEP invalid")
-        if " " in cep or "-" in cep or "." in cep:
+        if " " in v or "-" in v or "." in v or "/" in v:
             raise RuntimeError(f"CEP must be only numbers")
-        return 
+        print(f'after validation: {v}')
+        return v
