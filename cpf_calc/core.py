@@ -16,7 +16,7 @@ def cpf_generate(cpf):
 
     sum1 = sum(multiply1)
     result1 = 11 - (sum1 % 11)
-    
+
     if result1 >= 10:
         result1 = 0
 
@@ -36,6 +36,7 @@ def cpf_generate(cpf):
     end_result = "".join(str(x) for x in splitted_cpf)
 
     return end_result
+
 
 def cpf_validation(cpf):
     str(cpf)
@@ -62,14 +63,14 @@ def cpf_validation(cpf):
     splitted_cpf = "".join(str(x) for x in splitted_cpf)
 
     validated_cpf = cpf_generate(splitted_cpf)
-    
+
     if cpf != validated_cpf:
         raise RuntimeError(f"Invalid CPF: {cpf}, valid CPF: {validated_cpf}")
-    
+
     return True
 
 
 cpf = "567678435"
-print(f'Generated CPF: {cpf_generate(cpf)}')
+print(f"Generated CPF: {cpf_generate(cpf)}")
 cpf = "45317828791"
-print(f'Validated CPF: {cpf_validation(cpf)}')
+print(f"Validated CPF: {cpf_validation(cpf)}")
