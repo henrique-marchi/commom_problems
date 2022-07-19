@@ -1,5 +1,3 @@
-from posixpath import split
-
 
 def cpf_generate(cpf):
     if len(cpf) != 9:
