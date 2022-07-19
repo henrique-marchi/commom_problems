@@ -68,9 +68,3 @@ def cpf_validation(cpf):
         raise RuntimeError(f"Invalid CPF: {cpf}, valid CPF: {validated_cpf}")
 
     return True
-
-
-cpf = "567678435"
-print(f"Generated CPF: {cpf_generate(cpf)}")
-cpf = "45317828791"
-print(f"Validated CPF: {cpf_validation(cpf)}")
