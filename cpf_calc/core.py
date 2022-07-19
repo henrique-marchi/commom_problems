@@ -1,4 +1,3 @@
-
 def cpf_generate(cpf):
     if len(cpf) != 9:
         raise RuntimeError(
