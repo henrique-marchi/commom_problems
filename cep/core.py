@@ -10,7 +10,8 @@ def search_cep(cep):
     print(response.json())
 
 
-search_cep('06090027')
+
+search_cep("06090027")
 # 06090027 <-- Osasco/SP
 # 45860000 <-- Bahia
 # 01310200 <-- Random number

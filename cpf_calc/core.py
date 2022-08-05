@@ -1,6 +1,3 @@
-from posixpath import split
-
-
 def cpf_generate(cpf):
     if len(cpf) != 9:
         raise RuntimeError(
@@ -16,7 +13,7 @@ def cpf_generate(cpf):
 
     sum1 = sum(multiply1)
     result1 = 11 - (sum1 % 11)
-
+    
     if result1 >= 10:
         result1 = 0
 
