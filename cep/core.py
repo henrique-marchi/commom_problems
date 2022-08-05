@@ -1,9 +1,9 @@
 import requests
 
-from models import validate_cep
+from cep.models import validate_cep
 
 
-def search_cep(cep):
+def search_cep(cep: str):
     v_cep = validate_cep(cep)
     api_url = f"http://viacep.com.br/ws/{v_cep}/json/"
     response = requests.get(api_url)
