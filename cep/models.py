@@ -1,7 +1,17 @@
-    
-def validate_cep(cep):
-        cep = str(cep)
-        
-        if len(cep) != 8:
+import re
+
+
+class Cep:
+    cep: str
+
+    def validate_cep(self):
+        regex = re.compile("[@_!#$%^&*() <>?/\|}{~:]")
+        testcep = self.cep
+        if len(testcep) != 8:
             raise RuntimeError(f"CEP must contain only numbers")
-        return cep
+        if regex.search(testcep) != None:
+            raise RuntimeError(f"CEP must contain only numbers")
+        try:
+            int(testcep)
+        except ValueError:
+            raise RuntimeError(f"CEP must contain only numbers")
